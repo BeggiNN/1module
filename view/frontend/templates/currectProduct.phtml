@@ -1,0 +1,11 @@
+<?php
+$myBlock = \Magento\Framework\App\ObjectManager::getInstance()->get('\Perspective\CurrectProduct\Block\Custom');
+
+if ($currentProduct = $myBlock->getCurrentProduct()) {
+    echo $currentProduct->getName() . '<br />';
+    echo $currentProduct->getSku() . '<br />';
+    echo $currentProduct->getFinalPrice() . '<br />';
+    echo $currentProduct->getProductUrl() . '<br />';
+    print_r ($currentProduct->getCategoryIds())."<br />";
+}
+?>
