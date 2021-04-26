@@ -19,6 +19,10 @@
                     <label>Select Category</label>
                     <source_model>Perspective\NameChange\Model\Config\Source\Custom</source_model>
                 </field>
+                <field id="endDate" translate="label" type="date" sortOrder="1" showInDefault="1"  showInWebsite="0" showInStore="0">
+                    <label>Set the end sales date</label>
+                    <frontend_model>Perspective\NameChange\Block\Adminhtml\System\Config\Date</frontend_model>
+                </field>
             </group>
         </section>
     </system>

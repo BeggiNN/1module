@@ -38,7 +38,7 @@ class Data extends AbstractHelper
     }
 
     /**
-     *
+     * Check the product in the category whether it is.
      * @param $product
      * @return string
      */
@@ -47,7 +47,6 @@ class Data extends AbstractHelper
         $enable_module = $this->getGeneralConfig("enable");
         if ($enable_module) {
             $id = $this->getGeneralConfig("multiSelect");
-
             if ($product->canBeShowInCategory($id)) {
                 $collection = $this->categoryFactory->create()->load($id);
                 $name = $collection->getName();
